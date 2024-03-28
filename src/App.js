@@ -1,3 +1,5 @@
+// App.js
+
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 
@@ -62,6 +64,21 @@ function App() {
       button.classList.remove('button-clicked');
     }, 300); // Remove the class after the animation duration
   };
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { currentTarget: el, clientX: x, clientY: y } = e;
+      const { top: t, left: l, width: w, height: h } = el.getBoundingClientRect();
+      el.style.setProperty('--posX',  x-l-w/2);
+      el.style.setProperty('--posY',  y-t-h/2);
+    };
+    
+    document.body.addEventListener("pointermove", handleMouseMove);
+    
+    return () => {
+      document.body.removeEventListener("pointermove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <div className="App">
