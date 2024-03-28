@@ -12,7 +12,7 @@ body {
     radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(022 000 045)), 
     radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(250 255 000), rgb(036 000 000)), 
     radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(020 175 125), rgb(000 010 255)), 
-    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
+    radial-gradient(100% 100% at calc(100% - var(--x)) calc(70% - var(--y)), rgb(255 077 000), rgb(000 200 255)), 
     linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
   background-blend-mode: overlay, overlay, difference, difference, difference, normal;
 }
