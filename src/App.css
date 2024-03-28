@@ -1,38 +1,82 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Roboto Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0f1b; /* Navy-like dark blue background */
+  color: #fff; /* Light text */
+}
+
+/* App component styling */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Header within the App component */
+.App-header {
+  background-color: #162137; /* Slightly lighter navy for contrast */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  width: 90%;
+  max-width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the input and button */
+input[type="date"],
+button {
+  padding: 0.75rem;
+  border: 1px solid #28445b; /* Border color that fits the navy theme */
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 80%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  background: #28445b; /* Complementary dark blue for fields */
+  color: #fff; /* Light text */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+input[type="date"]:hover,
+button:hover {
+  border-color: #007bff; /* Change border color on hover */
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05); /* Scale up button on hover */
+}
+
+input[type="date"]:focus,
+button:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Button animation */
+@keyframes buttonClick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.button-clicked {
+  animation: buttonClick 0.3s ease-in-out;
+}
+
+/* Enlarged and readable text */
+p {
+  font-size: 1.25rem; /* Increased font size */
+  margin-top: 1rem;
 }
